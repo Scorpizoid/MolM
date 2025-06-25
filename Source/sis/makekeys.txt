@@ -1,0 +1,1 @@
+makekeys -cert -password rojolantie -len 2048 -dname "CN=Sami Vuori CO=FI EM=sambonen@gmail.com" periodictable.key periodictable.cer

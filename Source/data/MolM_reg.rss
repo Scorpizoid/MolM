@@ -1,0 +1,41 @@
+/*
+* ============================================================================
+*  Name        : MolM_reg.rss
+*  Part of     : MolM
+*  Interface   : 
+*  Description : RSS for registration file for MolM
+*  Version  :
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ============================================================================
+*/
+
+#include <appinfo.rh>
+#include <MolM.rsg>
+
+UID2 KUidAppRegistrationResourceFile
+UID3 0x2002AA25
+
+
+RESOURCE APP_REGISTRATION_INFO
+    {
+    app_file = "MolM";
+
+
+    localisable_resource_file = "\\resource\\apps\\MolM";
+
+
+    localisable_resource_id = R_MOLM_LOCALISABLE_APP_INFO;
+    
+    embeddability = KAppEmbeddable;
+    newfile = KAppDoesNotSupportNewFile;
+    }
+
+
+
+
+// End of File
+

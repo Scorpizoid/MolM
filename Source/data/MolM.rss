@@ -1,0 +1,142 @@
+/*
+* ============================================================================
+*  Name     		: MolM.rss
+*  Part of  		: MolM
+*  Interface   	:
+*  Description	: This file contains all the resources for
+|									the MolM.
+*  Version  :
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related
+*  computer programs, is protected by copyright controlled by
+*  Nokia Corporation.
+* ============================================================================
+*/
+
+//  RESOURCE IDENTIFIER
+NAME    AWIZ // 4 letter ID
+
+//  INCLUDES
+
+#include <eikon.rh>
+#include "MolM.hrh"
+#include "MolM.rls"
+#include <avkon.rsg>
+#include <avkon.rh>
+#include <avkon.mbg>
+#include <appinfo.rh>
+
+//  RESOURCE DEFINITIONS
+
+RESOURCE RSS_SIGNATURE { }
+
+RESOURCE TBUF { buf="MolM"; }
+
+RESOURCE EIK_APP_INFO
+    {
+    hotkeys=r_molm_hotkeys;
+    menubar=r_molm_menubar;
+    cba=R_AVKON_SOFTKEYS_OPTIONS_EXIT;
+    }
+
+RESOURCE LOCALISABLE_APP_INFO r_molm_localisable_app_info
+    {
+    short_caption = STRING_r_brctl_short_caption_string;
+    caption_and_icon =
+    CAPTION_AND_ICON_INFO
+        {
+        caption = STRING_r_brctl_caption_string;
+
+        number_of_icons = 1;
+
+        icon_file = "\\resource\\apps\\molm.mbm";
+//        icon_file = "\\resource\\apps\\MolM_AIF.MIF";
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_molm_hotkeys
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE HOTKEYS r_molm_hotkeys
+    {
+    control=
+        {
+        HOTKEY { command=EAknCmdExit; key='e'; }
+        };
+    }
+
+
+//----------------------------------------------------
+//
+//    r_input_element_buttons
+//    CBA buttons for input element
+//
+//----------------------------------------------------
+RESOURCE CBA r_input_element_buttons
+    {
+	flags = EAknCBAFlagRespondWhenInvisible;
+    buttons =
+                {
+				// left softkey id has to be EAknSoftkeyOptions so that T9 will
+				// be able to replace it with "Spell" when needed
+                CBA_BUTTON {id=EAknSoftkeyOptions; txt=STRING_r_brctl_options_input;},
+                CBA_BUTTON {id=EAknSoftkeyCancel; txt=STRING_r_brctl_cancel_input;}
+                };
+    }
+
+//----------------------------------------------------
+//
+//    r_browser_default_buttons
+//    Default CBA buttons for multipurpose browser display
+//
+//----------------------------------------------------
+//
+RESOURCE CBA r_browser_default_buttons
+    {
+	flags = EAknCBAFlagRespondWhenInvisible;
+    buttons =
+                {
+                CBA_BUTTON {id=EAknSoftkeyOptions; txt=STRING_r_brctl_options_default;},
+                CBA_BUTTON {id=EAknSoftkeyCancel; txt=STRING_r_brctl_cancel_default;}
+                };
+    }
+
+//----------------------------------------------------
+//
+//    r_molm_menubar
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_BAR r_molm_menubar
+    {
+    titles=
+        {
+        MENU_TITLE { menu_pane=r_molm_menu; txt=STRING_r_brctl_menubar; }
+        };
+    }
+
+//----------------------------------------------------
+//
+//    r_molm_menu
+//    ?description
+//
+//----------------------------------------------------
+//
+RESOURCE MENU_PANE r_molm_menu
+    {
+    items=
+        {
+        MENU_ITEM { command=EMolMCmdAppOpen; txt=STRING_r_brctl_menu_Open; },
+        MENU_ITEM { command=EMolMCmdAppAbout; txt=STRING_r_brctl_menu_About; },
+        MENU_ITEM { command=EAknCmdExit; txt=STRING_r_brctl_menu_exit; }
+        };
+    }
+
+
+

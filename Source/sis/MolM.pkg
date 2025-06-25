@@ -1,0 +1,31 @@
+;
+; Installation file for MolM Application
+
+;Languages
+&EN
+
+;Header, old UID 0xA0000181
+#{"MolM"},(0x2002AA25),1,0,0
+
+;Localised Vendor name
+%{"Sami Vuori"}
+
+;Unique Vendor name
+:"Sami Vuori"
+
+;Supports S60 v 3.0
+[0x101F7961], 0, 0, 0, {"S60ProductID"}
+
+; Browser Control Sample App 
+"..\..\..\epoc32\release\gcce\urel\MolM.exe"-"!:\sys\bin\MolM.exe"
+
+; Browser resources and bitmaps
+"..\..\..\epoc32\data\z\resource\apps\MolM.rsc"-"!:\Resource\apps\MolM.rsc"
+"..\..\..\epoc32\data\z\private\10003a3f\import\apps\MolM_reg.RSC"-"!:\private\10003a3f\import\apps\MolM_reg.rsc"
+"..\gfx\molm.mbm"-"!:\Resource\apps\molm.mbm"
+
+;required for application to be covered by backup/restore facility 
+;"backup_registration.xml"-"!:\private\A0000181\backup_registration.xml"
+"..\gfx\bg.mbm"-"C:\private\2002AA25\bg.mbm"
+"..\about.html"-"C:\private\2002AA25\about.html"
+

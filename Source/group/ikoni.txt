@@ -1,0 +1,3 @@
+bmconv Periodictable.mbm /c24icon.bmp /1icon_mask.bmp
+
+Sitten siirrät sen polkuun C:\Symbian\9.2\S60_3rd_FP1\Epoc32\release\winscw\udeb\z\resource\apps

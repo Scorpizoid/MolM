@@ -1,0 +1,71 @@
+/*
+* ==============================================================================
+*  Name        : MolM.mmp
+*  Part of     : MolM
+*  Interface   : Browser Control API
+*  Description : This is the project specification file
+		for MolM.
+*  Version     : 
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ==============================================================================
+*/
+
+TARGET      MolM.exe
+TARGETTYPE  exe
+UID  0x100039CE 0x2002AA25
+EPOCSTACKSIZE	  0x5000
+
+MACRO			GCCE
+
+EPOCHEAPSIZE 0x5000 0x1000000
+
+VENDORID    0
+
+CAPABILITY	NetworkServices WriteDeviceData ReadDeviceData
+
+
+SOURCEPATH ..\src
+SOURCE  MolM.cpp
+SOURCE  MolMUi.cpp
+SOURCE  MolMDocument.cpp
+SOURCE  MolMContainer.cpp
+SOURCE	KeyEvents.cpp
+
+
+START RESOURCE ..\data\MolM.rss
+HEADER
+TARGETPATH resource\apps
+LANG	SC
+END
+/*
+START BITMAP    MolM.mbm
+TARGETPATH      \Resource\Apps
+SOURCE          c24,1 icon.bmp icon_mask.bmp
+END
+*/
+
+START RESOURCE ..\data\MolM_reg.rss
+#ifdef WINSCW
+TARGETPATH 	  \private\10003a3f\apps
+#else
+TARGETPATH 	  \private\10003a3f\import\apps
+#endif
+END
+
+USERINCLUDE .
+USERINCLUDE ..\inc
+
+SYSTEMINCLUDE   . \epoc32\include
+
+LIBRARY euser.lib apparc.lib cone.lib eikcore.lib
+LIBRARY avkon.lib apmime.lib apgrfx.lib efsrv.lib eikcoctl.lib commonui.lib ecom.lib
+LIBRARY eikdlg.lib gdi.lib bitgdi.lib
+LIBRARY fbscli.lib
+
+LIBRARY browserengine.lib
+
+

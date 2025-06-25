@@ -1,0 +1,31 @@
+/*
+* ============================================================================
+*  Name		: molm.hrh
+*  Part of	: MolM
+*  Interface   	: Browser Control API
+*  Description	: This file contains declarations for constants of MolM.
+*				  The file can be included in C++ or resource file.
+*  Version		: 
+*
+*  Copyright (c) 2005-2006 Nokia Corporation.
+*  This material, including documentation and any related 
+*  computer programs, is protected by copyright controlled by 
+*  Nokia Corporation.
+* ============================================================================
+*/
+
+#ifndef MOLM_HRH
+#define MOLM_HRH
+
+enum TMolMCommandIds
+    {
+    
+    EMolMCmdAppOpen = 1,
+    EMolMCmdAppAbout = 2,
+    EMolMCmdAppBack = 3
+    };
+
+
+
+
+#endif      // MOLM_HRH
