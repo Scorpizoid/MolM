@@ -1,4 +1,4 @@
-A molar mass calculator for S80 devices. Coding was done by Emil Tchekov, but I did a "facelift" for the program.
+A molar mass calculator for Nokia E90 and S80 devices. Coding was done by Emil Tchekov, but I did a "facelift" for the program.
 
 Release history
 
